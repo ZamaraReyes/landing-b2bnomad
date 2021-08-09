@@ -142,6 +142,7 @@ li:hover ul.submenu {
 	left: 1040px;
 	width: 90px;
 	visibility: visible;
+  box-shadow: 0px 0px 20px rgb(80 80 80 / 10%);
 }
 
 #beneficios .btn-verde {
@@ -834,8 +835,25 @@ li:hover ul.submenu {
 		color: #243746;
 	}
 
+  .submenu {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    position: relative;
+    background-color: transparent;
+  }
+
+  .submenu li a {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  li:hover ul.submenu {
+    width: 100%;
+  }
+
 	.menu-responsive {
-	    display: inline-block;
+	  display: inline-block;
 	}
 
 	.header .menu {
