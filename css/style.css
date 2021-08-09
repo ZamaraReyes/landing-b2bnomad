@@ -137,9 +137,9 @@ footer > div {
 }
 
 li:hover ul.submenu {
-	top: 40px;
+	top: 60px;
 	opacity: 1;
-	left: 600px;
+	left: 1040px;
 	width: 90px;
 	visibility: visible;
 }
