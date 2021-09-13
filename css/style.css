@@ -95,12 +95,12 @@ h1, .header li a, footer p, #inicio p, .btn-verde, .btn-naranja, .btn-verde:hove
 	color: #fff;
 }
 
-header {
+/*header {
 	height: 100vh;
 	background-size: cover;
 	background-position: bottom;
 	background-image: url(../img/b2bnomad.jpeg);
-}
+}*/
 
 input[type=submit] {
 	border: none;
@@ -137,12 +137,14 @@ footer > div {
 }
 
 li:hover ul.submenu {
-	top: 60px;
 	opacity: 1;
-	left: 1040px;
 	width: 90px;
 	visibility: visible;
   box-shadow: 0px 0px 20px rgb(80 80 80 / 10%);
+}
+
+.sticky li:hover ul.submenu  {
+  right: 640px;
 }
 
 #beneficios .btn-verde {
@@ -166,7 +168,7 @@ li:hover ul.submenu {
 	padding: 17px 30px 13px 30px;
 }
 
-#inicio:after {
+/*#inicio:after {
 	top: 0;
 	right: 0;
 	content: '';
@@ -174,6 +176,11 @@ li:hover ul.submenu {
 	height: 100vh;
 	position: absolute;
 	background-color: rgba(0,0,0,0.5);
+}*/
+
+#inicio video {
+  width: 100%;
+  height: 100%;
 }
 
 #inicio p {
@@ -314,6 +321,7 @@ li:hover ul.submenu {
 }
 
 .header {
+  top: 0;
   width: 100%;
   z-index: 3;
 }
@@ -412,14 +420,14 @@ li:hover ul.submenu {
 }
 
 .submenu {
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	top: 35px;
-	visibility: hidden;
-	z-index: 1;
-	border-radius: 10px;
-	background-color: #fff;
+  right: 0;
+  top: 50px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgb(80 80 80 / 10%);
 }
 
 .submenu li a {
@@ -809,10 +817,6 @@ li:hover ul.submenu {
 }
 
 @media (max-width: 1024px) {
-	li:hover ul.submenu {
-		left: 540px;
-	}
-
 	.f-modal-alert {
 		width: 35%;
 	}
@@ -827,6 +831,14 @@ li:hover ul.submenu {
 		font-size: 16px;
 	}
 
+  #inicio h1 {
+    font-size: 32px;
+  }
+
+  #inicio p {
+    font-size: 18px;
+  }
+
   .header ul {
     margin-top: 20px;
   }
@@ -839,17 +851,20 @@ li:hover ul.submenu {
     top: 0;
     left: 0;
     opacity: 1;
+    box-shadow: none;
     position: relative;
     background-color: transparent;
   }
 
   .submenu li a {
+    font-weight: 500;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
   }
 
   li:hover ul.submenu {
     width: 100%;
+    box-shadow: none;
   }
 
 	.menu-responsive {
@@ -896,21 +911,41 @@ li:hover ul.submenu {
 		margin: 5px 0;
 	}
 
+  #inicio {
+    margin-top: 90px;
+  }
+
+  #inicio h1 {
+    font-size: 20px;
+  }
+
 	#beneficios, #que-es, #registrate {
-	    padding: 60px 0;
+	  padding: 60px 0;
 	}
 
 	#beneficios .linea, #que-es .linea, #registrate .linea {
-	    margin-bottom: 40px;
+	  margin-bottom: 40px;
 	}
 
 	#contacto {
-	    padding: 60px 0px 80px;
+	  padding: 60px 0px 80px;
 	}
+
+  .header .menu-icon .navicon, .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+    background: #243746;
+  }
 
 	.header .menu-btn:checked ~ .header {
 		background-color: #fff;
 	}
+
+  .logo-blanco {
+    display: none;
+  }
+
+  .logo-color {
+    display: block;
+  }
 
 	.btn-azul-izquierda {
 		margin-right: 5px;
