@@ -258,12 +258,20 @@ li:hover ul.submenu {
 	color: #243746;
 }
 
-.sticky .logo-color, .mostrar {
+.sticky .logo-color {
 	display: block;
 }
 
-.sticky .logo-blanco, .logo-color, .ocultar {
+.mostrar {
+  display: block !important;
+}
+
+.sticky .logo-blanco, .logo-color {
 	display: none;
+}
+
+.ocultar {
+  display: none !important;
 }
 
 .beneficio {
